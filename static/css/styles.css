@@ -1,0 +1,123 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"); */
+
+/* * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: inherit;
+} */
+
+ body {
+	font-family: "Noto Sans", sans-serif;
+	font-size: 16px;
+
+	/* https://cssgradient.io/gradient-backgrounds/ */
+	background: #c6ffdd;
+	background: linear-gradient( to right, #f7797d, #fbd786, #c6ffdd );
+
+	/* display: flex;
+	align-items: right; */
+	
+	/*
+	justify-content: right;
+	
+	
+	height: 100vh;	 */
+	/* margin: 0; */
+} 
+
+
+
+.form_radio_btn {
+	display: inline-block;
+	
+	margin-bottom: 3px;
+}
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+.form_radio_btn label {
+	display: inline-block;
+	cursor: pointer;	
+	padding: 0px 3px;
+	line-height: 20px;
+	border: 1px solid #999;
+	border-radius: 6px;
+	user-select: none;
+}
+ 
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+	background: #ffe0a6;
+}
+ 
+/* Hover */
+.form_radio_btn label:hover {
+	color: #666;
+}
+ 
+/* Disabled */
+.form_radio_btn input[type=radio]:disabled + label {
+	background: #efefef;
+	color: #666;
+}
+
+
+
+
+.drag-area{
+	border: 2px dashed rgb(5, 4, 100);
+	/* height: 500px;
+	width: 700px; */
+	border-radius: 5px;
+	/* display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column; */
+  }
+  .drag-area.active{
+	
+	border: 2px solid rgb(5, 4, 100);
+	
+  }
+  .drag-area header{
+	height: 35px;
+	font-size: 29px;
+	font-weight: 500;
+	color: rgb(5, 4, 100);
+  }
+  .drag-area span{
+	
+	font-size: 25px;
+	font-weight: 500;
+	color: #fff;
+	margin: 10px 0 15px 0;
+	
+  }
+  .drag-area button{
+	float: left;
+	padding: 0.65% 20px;
+	font-size: 20px;
+	font-weight: 500;
+	border: none;
+	outline: none;
+	background: rgba(22, 4, 102, 0.37);
+	color: rgb(5, 4, 100);
+	border-radius: 5px;
+	cursor: pointer;
+  }
+
+  .id-input{
+	margin-top: 0.5%;
+	width: 60%;
+	font-size: 200%;
+	
+  }
+  
+  
+.blue {float: left;width: 65%;}
+.white {float: left; width: 17%; }
+.orange {background: orange;  }
+/* .green {background: white; float: left; width: 17%;} */
+/* .q_group {background: white; border: 2px solid rgb(0, 0, 0);border-radius: 6px;user-select: none;} */
+

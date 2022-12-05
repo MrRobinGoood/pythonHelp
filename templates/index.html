@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Simple Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/demo.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/component.css') }}">
+
+</head>
+
+<body>
+
+    <div class="blue">
+        
+        	
+        <div class="component">        
+            <img id="user-img" class="resize-image" src="templates/img/image.jpg" style="width: 100%;" alt="image for resizing">
+            <button class="btn-crop js-crop">-</button>
+            <button class="btn-crop2 js-crop2">+</button>
+            <button class="btn-crop3 js-crop3">100%</button>
+            <button class="btn-crop4 js-crop4">По центру</button>
+
+        </div>        
+          
+        <script type="text/javascript" src="{{ url_for('static',filename='js/jquery-2.1.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static',filename='js/component.js') }}"></script>
+
+
+        <div class="drag-area">                     
+            <div>                    
+                <button id="btn_choose_file">Выбрать файл</button>                    
+                <input type="file" hidden>
+                <header>Или перетащите в это поле</header>
+            </div>
+        </div>
+        <script type="text/javascript" src="{{ url_for('static',filename='js/script.js') }}"></script>
+
+
+        <div>
+            <b style="font-size: 200%;">ID</b>
+            <input class="id-input" id="text" type="text" class="form-control">
+
+            <script>
+            $('#text').focus(function(){
+                $('#result').html('Фокус установлен');
+            });
+            
+            $('#text').blur(function(){
+                $('#result').html('Фокус снят');
+            });
+            </script>
+        </div>
+    </div>
+    
+    
+    
+            
+    <div class="white">
+        <div>
+            <div><b>Нажим</b></div>  
+            <div class="form_radio_btn">
+                <input id="radio-1" type="radio" name="q1" value="5">
+                <label for="radio-1">Сильный</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-2" type="radio" name="q1" value="15">
+                <label for="radio-2">Средний</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-3" type="radio" name="q1" value="10">
+                <label for="radio-3">Слабый</label>
+            </div>
+        </div>
+        
+        <div>            
+            <div><b>Нажим</b></div>  
+            <div class="form_radio_btn">
+                <input id="radio-4" type="radio" name="q2" value="1">
+                <label for="radio-4">Ровный</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-5" type="radio" name="q2" value="2">
+                <label for="radio-5">Неровный</label>
+            </div>            
+        </div>
+        
+        <div>
+            <div><b>Горизонт строк</b></div>  
+            <div class="form_radio_btn">
+                <input id="radio-6" type="radio" name="q3" value="1">
+                <label for="radio-6">Горизонтальный</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-7" type="radio" name="q3" value="2">
+                <label for="radio-7">Поднимающийся</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-8" type="radio" name="q3" value="3">
+                <label for="radio-8">Опускающийся</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Межстрочный интервал</b></div>  
+            <div class="form_radio_btn">
+                <input id="radio-9" type="radio" name="q4" value="1">
+                <label for="radio-9">Конгруэнтный</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-10" type="radio" name="q4" value="2">
+                <label for="radio-10">Уплотнённый</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-11" type="radio" name="q4" value="3">
+                <label for="radio-11">Увеличенный</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-12" type="radio" name="q4" value="1">
+                <label for="radio-12">Изменяющийся</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-13" type="radio" name="q4" value="2">
+                <label for="radio-13">Спутанные строки</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-14" type="radio" name="q4" value="3">
+                <label for="radio-14">Закрученные строки</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Форма строк</b></div>
+            <div class="form_radio_btn">
+                <input id="radio-15" type="radio" name="q5" value="1">
+                <label for="radio-15">Прямая</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-16" type="radio" name="q5" value="2">
+                <label for="radio-16">Волнообразная</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-17" type="radio" name="q5" value="3">
+                <label for="radio-17">Параболическая</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-18" type="radio" name="q5" value="1">
+                <label for="radio-18">«Cтупеньки»</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Форма букв</b></div>
+            <div class="form_radio_btn">
+                <input id="radio-19" type="radio" name="q6" value="1">
+                <label for="radio-19">Печатные</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-20" type="radio" name="q6" value="2">
+                <label for="radio-20">Круглые</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-21" type="radio" name="q6" value="3">
+                <label for="radio-21">Угловатые</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Форма заглавных букв</b></div> 
+            <div class="form_radio_btn">
+                <input id="radio-22" type="radio" name="q7" value="1">
+                <label for="radio-22">Конгруэнтные буквы</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-23" type="radio" name="q7" value="2">
+                <label for="radio-23">Укрупненные</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-24" type="radio" name="q7" value="3">
+                <label for="radio-24">Буквы с петлями</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-25" type="radio" name="q7" value="1">
+                <label for="radio-25">Печатные буквы</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-26" type="radio" name="q7" value="2">
+                <label for="radio-26">Буквы с завитушками</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Форма написания петель</b></div>  
+            <div class="form_radio_btn">
+                <input id="radio-27" type="radio" name="q8" value="1">
+                <label for="radio-27">Отсутствие петель</label>
+            </div>
+            
+            <div class="form_radio_btn"> 
+                <input id="radio-28" type="radio" name="q8" value="2">
+                <label for="radio-28">Узкие петли</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-29" type="radio" name="q8" value="3">
+                <label for="radio-29">Длинные петли</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-30" type="radio" name="q8" value="1">
+                <label for="radio-30">Разрывы в «овалах» буквы</label>
+            </div>
+        </div>
+
+
+    </div>    
+
+    <div class="white">
+        <div>
+            <div><b>Форма направленности петель</b> </div> 
+            <div class="form_radio_btn">
+                <input id="radio-31" type="radio" name="q9" value="1">
+                <label for="radio-31">Направлены в конкретную сторону</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-32" type="radio" name="q9" value="2">
+                <label for="radio-32">Развернуты в обратном направлении</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Кегль букв</b></div>  
+            <div class="form_radio_btn">
+                <input id="radio-33" type="radio" name="q10" value="1">
+                <label for="radio-33">Крупный</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-34" type="radio" name="q10" value="2">
+                <label for="radio-34">Средний</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-35" type="radio" name="q10" value="2">
+                <label for="radio-35">Мелкий</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Динамика кегля букв</b></div>
+            <div class="form_radio_btn">
+                <input id="radio-36" type="radio" name="q11" value="1">
+                <label for="radio-36">Постоянство</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-37" type="radio" name="q11" value="2">
+                <label for="radio-37">Укрупнение</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-38" type="radio" name="q11" value="2">
+                <label for="radio-38">Уменьшение</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-39" type="radio" name="q11" value="2">
+                <label for="radio-39">Вариация </label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Штрихи в буквах</b></div> 
+            <div class="form_radio_btn">
+                <input id="radio-40" type="radio" name="q12" value="1">
+                <label for="radio-40">Отсутствуют</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-41" type="radio" name="q12" value="2">
+                <label for="radio-41">Начальные штрихи</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-42" type="radio" name="q12" value="2">
+                <label for="radio-42">Конечные штрихи</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-43" type="radio" name="q12" value="2">
+                <label for="radio-43">Начальные и конечные</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Соединение букв</b></div>
+            <div class="form_radio_btn">
+                <input id="radio-44" type="radio" name="q13" value="1">
+                <label for="radio-44">Слитное</label>
+            </div>
+            
+            <div class="form_radio_btn"> 
+                <input id="radio-45" type="radio" name="q13" value="2">
+                <label for="radio-45">Изолированное</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Интервал между словами</b></div>
+            <div class="form_radio_btn">
+                <input id="radio-46" type="radio" name="q14" value="1">
+                <label for="radio-46">Конгруэнтный</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-47" type="radio" name="q14" value="2">
+                <label for="radio-47">Уплотнённый</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-48" type="radio" name="q14" value="2">
+                <label for="radio-48">Увеличенный</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-49" type="radio" name="q14" value="2">
+                <label for="radio-49">Изменяющийся</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Наклон букв</b></div> 
+            <div class="form_radio_btn">
+                <input id="radio-50" type="radio" name="q15" value="1">
+                <label for="radio-50">Сильный вправо</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-51" type="radio" name="q15" value="2">
+                <label for="radio-51">Небольшой вправо</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-52" type="radio" name="q15" value="2">
+                <label for="radio-52">Наклон отсутствует</label>
+            </div>
+
+            <div class="form_radio_btn"> 
+                <input id="radio-53" type="radio" name="q15" value="2">
+                <label for="radio-53">Небольшой влево</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-54" type="radio" name="q15" value="2">
+                <label for="radio-54">Сильный влево</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="radio-55" type="radio" name="q15" value="2">
+                <label for="radio-55">Разносторонний</label>
+            </div>
+        </div>
+
+        <div>
+            <div><b>Характер письма</b></div> 
+            <div class="form_radio_btn">
+                <input id="radio-56" type="radio" name="q16" value="1">
+                <label for="radio-56">Разборчивый</label>
+            </div>
+            
+            <div class="form_radio_btn">
+                <input id="radio-57" type="radio" name="q16" value="2">
+                <label for="radio-57">Неразборчивый</label>
+            </div>
+        </div>
+
+
+    </div>    
+
+    
+    <script>    
+        function testCount( ) {
+            const
+                test = document.querySelector(".test"),
+                questionsCount = test.querySelectorAll("ul").length - 1,
+                checked = test.querySelectorAll("input:checked"),
+                checkedCount = checked.length,
+                right = test.querySelectorAll("li.right input:checked"),
+                rightCount = right.length
+            ; 
+            alert( `Вопросов в тесте: ${questionsCount}
+Вопросов без ответа: ${questionsCount - checkedCount}, ${100 - (checkedCount / questionsCount * 100).toFixed(0)}%
+Верных ответов: ${rightCount}, ${(rightCount / questionsCount * 100).toFixed(0)}%
+`)
+        }
+    </script>
+    
+</body>
+ 
+</html>

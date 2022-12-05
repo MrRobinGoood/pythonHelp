@@ -1,0 +1,58 @@
+.btn-crop {
+	position: absolute;
+	vertical-align: bottom;
+	right: 5px;
+	bottom: 5px;
+	padding: 6px 11px;
+	z-index: 999;
+	background-color: rgb(222,60,80);
+	border: none;
+	border-radius: 5px;
+	color: #FFF;
+	user-select: none;
+}
+
+.btn-crop2 {
+	position: absolute;
+	vertical-align: bottom;
+	right: 37px;
+	bottom: 5px;
+	padding: 6px 10px;
+	z-index: 999;
+	background-color: rgb(222,60,80);
+	border: none;
+	border-radius: 5px;
+	color: #FFF;
+	user-select: none;
+}
+
+.btn-crop3 {
+	position: absolute;
+	vertical-align: bottom;
+	right: 71px;
+	bottom: 5px;
+	padding: 6px 10px;
+	z-index: 999;
+	background-color: rgb(222,60,80);
+	border: none;
+	border-radius: 5px;
+	color: #FFF;
+	user-select: none;
+}
+
+.btn-crop4 {
+	position: absolute;
+	vertical-align: bottom;
+	right: 131px;
+	bottom: 5px;
+	padding: 6px 10px;
+	z-index: 999;
+	background-color: rgb(222,60,80);
+	border: none;
+	border-radius: 5px;
+	color: #FFF;
+	user-select: none;
+}
+
+
+
